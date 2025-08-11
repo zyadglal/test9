@@ -381,7 +381,7 @@ if (bars && sidebar && dashboard) {
                 const homeworkChecked = localStorage.getItem(`homework_${i}`) === "true" ? "checked" : "";
                 table += `<tr>
                 <td>
-                    <h5 id="subject_${i}" style="color:${new_subject[i].color};display: inline-block;background-color:${new_subject[i].color}50;text-align: center;padding:10px;border-radius: 25px;font-size: 14px;border-radius:10px" >${new_subject[i].subject}</h5>
+                    <h5 id="subject_${i}" class="user-select" style="color:${new_subject[i].color};display: inline-block;background-color:${new_subject[i].color}50;text-align: center;padding:10px;border-radius: 25px;font-size: 14px;border-radius:10px" >${new_subject[i].subject}</h5>
                 </td>
                 <td>${new_subject[i].teacher}</td>
                 <td>${new_subject[i].day}<br>${new_subject[i].lesson}</td>
@@ -525,6 +525,7 @@ if (bars && sidebar && dashboard) {
     document.getElementById('time_table').onclick = function () {
         window.location.href = 'project-timetable/index.html';
     };
+
 
 
 
