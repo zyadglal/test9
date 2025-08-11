@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/my teacher.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title id="title">Timetable</title>
+</head>
+
+<body>
+    <div class="dashboard"><span><i class="fa-solid fa-bars"></i></span>Education Dashboard</div>
+
+    <!-- <i class="fa-solid fa-bars"></i> -->
+    <!--side bar -->
+    <div class="sidebar hide" id="sidebar">
+        <div class="sidebar-header">
+            <h2>My Teacher</h2>
+            <ul>
+                <h6>Menu</h6>
+                <li id="h2ome"><i class="fa-solid fa-house"></i><a href="../index.html">Home</a></li>
+                <li id="t2imetable"><i class="fa-solid fa-calendar"></i><a
+                        href="../project-timetable/index.html">Timetable</a></li>
+                <li id="c2hannels"><i class="fa-solid fa-message"></i><a href="../project-contact/index.html">Teacher
+                        Channels</a></li>
+                <li id="t2asks"><i class="fa-solid fa-list-check"></i><a href="../project-To-Do-list/index.html">To-Do
+                        List</a></li>
+            </ul>
+            <ul>
+                <h6>Teachers</h6>
+                <li><i class="fa-solid fa-book-open"></i>Arabic Teacher</li>
+                <li><i class="fa-solid fa-globe"></i>English Teacher</li>
+                <li><i class="fa-solid fa-calculator"></i>Math Teacher</li>
+                <li><i class="fa-solid fa-flask-vial"></i>Chemistry Teacher</li>
+                <li><i class="fa-solid fa-brain"></i>Physics Teacher</li>
+            </ul>
+        </div>
+    </div>
+    <div class="timetable">
+        <div id="weekly-t">
+            <h2>Weekly Timetable</h2>
+            <p>Track your lessons and homework across all subjects</p>
+        </div>
+        <div class="timetable-grid">
+            <div id="element8" class="slide-in-lef3t">
+                <i class="fa-solid fa-calendar"></i>5<br> Total Subjects
+            </div>
+            <div id="num" class="slide-in-cente3r">
+                <i class="fa-solid fa-clock"></i>0<br>Lessons Done
+            </div>
+            <div id="homework-input" class="slide-in-cente3r">
+                <i class="fa-solid fa-book"></i>0<br> Homework Done
+            </div>
+            <div id="progress" class="slide-in-righ3t">
+                <i class="fa-solid fa-bars-progress"></i>0%<br> progress
+            </div>
+        </div>
+    </div>
+    <div class="schedule">
+        <h2><i class="fa-solid fa-calendar"></i>Subject Schedule</h2>
+        <p>Click the checkboxes to mark<br>lessons and homework as completed</p>
+    </div>
+    <div class="container">
+        <table class="timetable-table" id="table_sub">
+            <tr>
+                <th>Subject</th>
+                <th>Teacher</th>
+                <th>Lesson Day</th>
+                <th>Homework Day</th>
+                <th>Link</th>
+                <th>Lesson</th>
+                <th>Homework</th>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Arabic</h5>
+                </td>
+                <td>Mohamed Salah</td>
+                <td>---</td>
+                <td>---</td>
+                <td><a href="https://bassthalk.com/home" class="join" target=" _blank"><i
+                            class="fa-solid fa-up-right-from-square"></i> Join</a></td>
+                <td><input type="checkbox" onclick="plus() , updateProgress()"></td>
+                <td><input type="checkbox" id="homework" onclick="homeworkFunc() , updateProgress()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>English</h5>
+                </td>
+                <td>Ayman Fayez</td>
+                <td>Sunday<br>4:30pm</td>
+                <td>---</td>
+                <td>---</td>
+                <td><input type="checkbox" onclick="plus() , updateProgress()"></td>
+                <td><input type="checkbox" id="homework" onclick="homeworkFunc() , updateProgress()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Math</h5>
+                </td>
+                <td>eng.Ahmed Esam</td>
+                <td>Tuesday<br>---</td>
+                <td>Saturday</td>
+                <td><a href="https://www.jawacademy.net/teacher-profile/5" target="_blank"><i
+                            class="fa-solid fa-up-right-from-square"></i> Join</a></td>
+                <td><input type="checkbox" onclick="plus() , updateProgress()"></td>
+                <td><input type="checkbox" id="homework" onclick="homeworkFunc() , updateProgress()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Chemistry</h5>
+                </td>
+                <td>Khaled Saqr</td>
+                <td>Saturday<br>6:00pm</td>
+                <td>Tuesday</td>
+                <td><a href="https://www.khaled-sakr.com/user-profile/my-courses" target="_blank"><i
+                            class="fa-solid fa-up-right-from-square"></i> Join</a></td>
+                <td><input type="checkbox" onclick="plus() , updateProgress()"></td>
+                <td><input type="checkbox" id="homework" onclick="homeworkFunc() , updateProgress()"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h5>Physics</h5>
+                </td>
+                <td>M. Abd Elma3bood</td>
+                <td>---</td>
+                <td>---</td>
+                <td><a href="https://abdelmaaboud.com/login" target="_blank"><i
+                            class="fa-solid fa-up-right-from-square"></i> Join</a></td>
+                <td><input type="checkbox" onclick="plus() , updateProgress()"></td>
+                <td><input type="checkbox" id="homework" onclick="homeworkFunc() , updateProgress()"></td>
+            </tr>
+        </table>
+        <!-- Edit Timetable Chain Menu -->
+        <div class="upadate-timetable">
+            <button class="update">Edit Timetable</button>
+            <div class="options visible" id="options">
+                <div class="display-container">
+                    <button class="display">Display</button>
+                </div>
+                <div class="subject-container">
+                    <button class="Subject">Subject</button>
+
+                </div>
+            </div>
+            <div class="display-options">
+                <button class="list">List</button>
+                <button class="grid">Grid</button>
+            </div>
+            <div class="Subject-options">
+                <button class="Add">Add</button>
+
+                <button class="Delete">Delete</button>
+
+                <button class="Lesson">Lesson Day</button>
+                
+                <button class="Link">Link</button>
+                
+                <button class="Homework">Homework Day</button>
+
+            </div>
+            <div class="add-subject">
+                <h2>Add Subject</h2>
+                <input type="text" placeholder="Type Subject Name" id="subject">
+                <input type="text" placeholder="Type Teacher Name" id="teacher">
+                <input type="text" placeholder="Type Lesson Day" id="day">
+                <input type="time" placeholder="Type Lesson Time" id="lesson">
+                <input type="text" placeholder="Type Homework Day"  id="homewor2k">
+                <input type="url" placeholder="Type the link" id="link">
+                <input type="color" placeholder="Select a color" id="color">
+                <button class="add-sub">Add</button>
+            </div>
+            <div class="delete-subject hide">
+                <h2>Delete Subject</h2>
+                <input type="text" placeholder="Subject Name">
+                <input type="text" placeholder="Teacher Name">
+                <input type="text" placeholder="Lesson Day">
+                <input type="text" placeholder="Homework Day">
+                <input type="text" placeholder="Link">
+            </div>
+            <div class="Lesson-options ">
+                <button class="Time hide">Time</button>
+                <input type="text" placeholder="Enter the Day" class="hide">
+                <button class="Date hide">Date</button>
+                <input type="text" placeholder="Enter the Time" class="hide">
+            </div>
+            <div class="Homework-options ">
+                <button class="Time hide">Time</button>
+                <input type="text" placeholder="Enter the Day" class="hide">
+                <button class="Date hide">Date</button>
+                <input type="text" placeholder="Enter the Time" class="hide">
+            </div>
+            <div class="link-page ">
+                <input type="text" placeholder="Enter the Link" class="hide">
+            </div>
+
+        </div>
+        <script src="../my teacher.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/my teacher.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title id="title">To-do list</title>
+</head>
+<body>
+    <div class="dashboard"><span><i class="fa-solid fa-bars"></i></span>Education Dashboard</div>
+    
+    <!-- <i class="fa-solid fa-bars"></i> -->
+    <!--side bar -->
+    <div class="sidebar hide" id="sidebar">
+        <div class="sidebar-header">
+            <h2>My Teacher</h2>
+            <ul>
+                <h6>Menu</h6>
+                <li id="h2ome"><i class="fa-solid fa-house"></i><a href="../index.html">Home</a></li>
+                <li id="t2imetable"><i class="fa-solid fa-calendar"></i><a href="../project-timetable/index.html">Timetable</a></li>
+                <li id="c2hannels"><i class="fa-solid fa-message"></i><a href="../project-contact/index.html">Teacher Channels</a>
+                </li>
+                <li id="t2asks"><i class="fa-solid fa-list-check"></i><a href="../project-To-Do-list/index.html">To-Do List</a></li>
+            </ul>
+            <ul>
+                <h6>Teachers</h6>
+                <li><i class="fa-solid fa-book-open"></i>Arabic Teacher</li>
+                <li><i class="fa-solid fa-globe"></i>English Teacher</li>
+                <li><i class="fa-solid fa-calculator"></i>Math Teacher</li>
+                <li><i class="fa-solid fa-flask-vial"></i>Chemistry Teacher</li>
+                <li><i class="fa-solid fa-brain"></i>Physics Teacher</li>
+            </ul>
+        </div>
+    </div>
+    <!-- To-Do-list -->
+    <div class="to-do">
+        <div class="weekly-t">
+            <h2>To-Do List</h2>
+            <p>Organize your study tasks and track your progress</p>
+        </div class="timetable">
+        <div class="timetable-grid">
+            <div id="total" class="slide-in-lef3t">
+                <i class="fa-solid fa-bars-progress"></i>5<br>Total Tasks
+            </div>
+            <div id="comp" class="slide-in-cente3r">
+                <i class="fa-regular fa-square-check"></i>0<br>Completed
+            </div>
+            <div id="rem" class="slide-in-cente3r">
+                <i class="fa-regular fa-square"></i>0<br>Remaining
+            </div>
+            <div id="progres2s" class="slide-in-righ3t">
+                <i class="fa-solid fa-bars-progress"></i>0%<br> progress
+            </div>
+        </div>
+        <div class="form-control">
+            <input type="value" required="" class="task-input">
+            <label>
+                <span style="transition-delay:0ms">A</span><span style="transition-delay:50ms">d</span><span
+                    style="transition-delay:100ms">d</span><span style="transition-delay:150ms"> </span><span
+                    style="transition-delay:200ms">a</span><span style="transition-delay:250ms"></span><span
+                    style="transition-delay:300ms">T</span><span style="transition-delay:350ms">a</span><span
+                    style="transition-delay:400ms">s</span><span style="transition-delay:450ms">k</span>
+            </label>
+            <button class="add-btn"><i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div id="task-container">
+    
+        </div>
+    </div>
+    </div>
+    <script src="../my teacher.js"></script>
+</body>
+</html>
